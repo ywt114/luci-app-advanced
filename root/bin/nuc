@@ -77,4 +77,4 @@ $ifconfig eth0.18 up
 
 sed -i '/MASQUERADE/d' /etc/firewall.user
 echo "iptables -t nat -I POSTROUTING -j MASQUERADE" >> /etc/firewall.user
-reboo
+reboot
