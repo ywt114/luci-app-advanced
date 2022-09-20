@@ -1,6 +1,6 @@
 #!/bin/sh
 
-uci set system.@system[0].hostname="Openwrt"
+uci set system.@system[0].hostname="OpenWrt"
 uci commit
 
 cat > /etc/config/network <<EOF
@@ -20,7 +20,7 @@ config interface 'lan'
 config interface 'wan'
 	option ifname 'eth1'
 	option proto 'dhcp'
-	option hostname 'Openwrt'
+	option hostname 'OpenWrt'
 EOF
 
 sed -i '/REDIRECT --to-ports 53/d' /etc/firewall.user
